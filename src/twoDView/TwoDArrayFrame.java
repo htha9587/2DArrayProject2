@@ -4,10 +4,10 @@ import java.awt.*;
 import twoDController.TwoDArrayController;
 
 /**
- * Version 0.1
+ * Version 0.2
  * @author htha9587
  *Creates JFrame for 2D Array GUI.
- *2-8-16
+ *2-24-16
  */
 
 public class TwoDArrayFrame extends JFrame
