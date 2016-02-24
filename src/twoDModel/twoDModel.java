@@ -1,7 +1,7 @@
 package twoDModel;
 
 /**
- * version 0.2
+ * version 0.3
  * @author htha9587
  * Framework for 2D Creation Project.
  *
@@ -10,7 +10,7 @@ package twoDModel;
 import twoDController.TwoDArrayController;
 import twoDView.TwoDArrayFrame;
 import twoDView.TwoDArrayPanel;
-
+import java.math.BigInteger;
 
 public class twoDModel 
 {
@@ -20,6 +20,12 @@ public class twoDModel
 	private String fibonacciNumber;
 	private String factorialNumber;
 	private String factorialNumber1;
+	private int fibonacciIteration;
+	private int factorialIteration;
+	public long startTime;
+	public long endTime;
+	
+	
 	
 
 	
@@ -101,8 +107,41 @@ public class twoDModel
 		{
 			return n * factorialNumber(n - 1);
 		}
+	}
+		
+	public int fibonacciIteration(int n)	
+	{
+		int x, y, z;
+		
+		startTime = System.nanoTime();
+		if(n == 0)
+			return 0;
+		else
+		{
+			x = 0;
+			y = 1;
+			for(int i = 0; i <= n; i++)
+			{
+				z = x + y;
+				x = y;
+				y = z;
+			}
+			endTime = System.nanoTime();
+			return y;
+		}
 		
 		
+		
+	}
+	
+	public BigInteger factorialIteration(int n)
+	{
+		BigInteger factValue = BigInteger.ONE;
+		for( int i = 2; i <= n; i++)
+		{
+			factValue = factValue.multiply(BigInteger.valueOf(i));
+		}
+		return factValue;
 	}
 
 	

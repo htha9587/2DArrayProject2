@@ -9,7 +9,7 @@ import twoDModel.Timer;
  * 2-24-16
  * @author htha9587
  *Controller class for 2D Array Recursion project.
- *Version 0.2
+ *Version 0.3
  */
 
 public class TwoDArrayController 
